@@ -26,7 +26,7 @@ $ python main.py
 
 * ![chest](https://github.com/t5avish/pathfinding/assets/96640086/20dcbb01-10dd-4f18-9b3c-2bd9445fedfe) : to place the treasure chest (destination point)
 
-* ![obstacle](https://github.com/t5avish/pathfinding/assets/96640086/28017897-a1fa-48d5-b607-3f6d72c80609) : to place an obstacle (the characher cant go throw)
+* ![obstacle](https://github.com/t5avish/pathfinding/assets/96640086/28017897-a1fa-48d5-b607-3f6d72c80609) : to place an obstacle (the character cant go throw)
 
 * ![eraser](https://github.com/t5avish/pathfinding/assets/96640086/8252120f-edfd-4824-a376-c6460831c145) : to delete an object from the board
 
