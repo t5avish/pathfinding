@@ -4,7 +4,7 @@
 a simple pathfinding simulation written with Python and Pygame.
 the application implements the BFS algorithm to find the shortest path between two points: a character and a treasure chest.
 
-##Requirements
+## Requirements
 Requires [python](https://www.python.org/downloads/) and [pygame](https://www.pygame.org/) installed locally.
 
 
@@ -22,14 +22,13 @@ $ python main.py
 ```
 
 ## Usage / Controls
-* 
-![player](https://github.com/t5avish/pathfinding/assets/96640086/04de91da-3f1f-4eef-a855-2d4153107097) : to place the character (origin point)
+* ![player](https://github.com/t5avish/pathfinding/assets/96640086/04de91da-3f1f-4eef-a855-2d4153107097) : to place the character (origin point)
 
 * ![chest](https://github.com/t5avish/pathfinding/assets/96640086/20dcbb01-10dd-4f18-9b3c-2bd9445fedfe)) : to place the treasure chest (destination point)
 
 * ![obstacle](https://github.com/t5avish/pathfinding/assets/96640086/28017897-a1fa-48d5-b607-3f6d72c80609) : to place an obstacle (the characher cant go throw)
 
-* ![eraser](https://github.com/t5avish/pathfinding/assets/96640086/ec3811d5-982f-492d-a229-c6efd234aa39) : to delete an object from the board
+* ![eraser](https://github.com/t5avish/pathfinding/assets/96640086/8252120f-edfd-4824-a376-c6460831c145) : to delete an object from the board
 
 * ![start](https://github.com/t5avish/pathfinding/assets/96640086/39da304e-7b4d-46c3-8a41-7a96e8ff02c2) : to start the simulation
 
