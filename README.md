@@ -24,7 +24,7 @@ $ python main.py
 ## Usage / Controls
 * ![player](https://github.com/t5avish/pathfinding/assets/96640086/04de91da-3f1f-4eef-a855-2d4153107097) : to place the character (origin point)
 
-* ![chest](https://github.com/t5avish/pathfinding/assets/96640086/20dcbb01-10dd-4f18-9b3c-2bd9445fedfe)) : to place the treasure chest (destination point)
+* ![chest](https://github.com/t5avish/pathfinding/assets/96640086/20dcbb01-10dd-4f18-9b3c-2bd9445fedfe) : to place the treasure chest (destination point)
 
 * ![obstacle](https://github.com/t5avish/pathfinding/assets/96640086/28017897-a1fa-48d5-b607-3f6d72c80609) : to place an obstacle (the characher cant go throw)
 
