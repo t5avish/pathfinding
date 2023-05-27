@@ -3,7 +3,6 @@ from settings import TILE_SIZE
 from data import buttons_assets
 from support import import_folder
 
-
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y, path):
         super().__init__()
@@ -75,8 +74,4 @@ class Player(pygame.sprite.Sprite):
     def update(self):
         if self.active:
             self.move(self.speed)
-            self.animate()
-            
-            
-        
-                                        
+            self.animate()                          
