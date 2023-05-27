@@ -12,24 +12,18 @@ class Editor():
         self.display_surface = pygame.display.get_surface()
         self.reset_objects()
         
-        # background
         self.ground_layout = import_csv_layout(map_assets['ground'])
         self.ground_sprites = self.create_tile_group(self.ground_layout, 'ground')
 
-        # menu
         self.menu = Menu(540, 70)
         self.selection_index = None
         self.active = True
-
-        # objects
+        
         self.objects_layout = import_csv_layout(map_assets['objects'])
-
-        # player
         self.player = pygame.sprite.GroupSingle()
 
     def create_tile_group(self, layout, type):
         sprite_group = pygame.sprite.Group()
-
         for row_index, row in enumerate(layout):
             for col_index, val in enumerate(row):
                 if val != '-1':
@@ -39,27 +33,23 @@ class Editor():
                         ground_tile_list = import_cut_graphics(os.path.dirname(__file__) + '/../graphics/tiles/ground.png')
                         tile_surface = ground_tile_list[int(val)]
                         sprite = StaticTile(TILE_SIZE, x, y, tile_surface)    
-
+                        
                     if type == 'objects':
                         objects_tile_list = import_cut_graphics(os.path.dirname(__file__) + '/../graphics/tiles/objects.png')
                         tile_surface = objects_tile_list[int(val)]
                         sprite = StaticTile(TILE_SIZE, x , y ,tile_surface)
-
                     sprite_group.add(sprite)
-
         return sprite_group
     
     def get_clicked_cell(self):
         x = int(pygame.mouse.get_pos()[0] / TILE_SIZE)
         y = int(pygame.mouse.get_pos()[1] / TILE_SIZE)
-
         if x < 1 or x > 19 or y < 1 or y > 9 or (x % 2 == 0 and y % 2 == 0):
             x = -1
             y = -1
         else:
             x -= 1
             y -= 1
-
         return x, y
 
     def menu_click(self, event):
@@ -92,14 +82,11 @@ class Editor():
         graph = Graph(self.ground_layout, self.objects_layout)
         path = graph.get_path()
 
-        if path == None:
+        if path is None:
             return
-        
         self.active = False
         self.menu.active = False
-
         edit_csv_file(map_assets['objects'], graph.player_vertex.x + 1, graph.player_vertex.y + 1, -1)
-
         sprite = Player(graph.player_vertex.x, graph.player_vertex.y, path)
         self.player.add(sprite)
 
@@ -124,13 +111,9 @@ class Editor():
 
     def run(self):
         self.event_loop()
-
         self.ground_sprites.update()
         self.ground_sprites.draw(self.display_surface)
-
         self.setup_objects()
-
         self.player.update()
         self.player.draw(self.display_surface)
-
         self.menu.display(self.selection_index)
