@@ -79,17 +79,17 @@ class Graph():
                 queue.put(vertex)
 
     def get_path(self):
-        if self.player_vertex == None or self.chest_vertex == None:
+        if self.player_vertex is None or self.chest_vertex is None:
             return
+        
         self.BFS()
         if self.chest_vertex.distance == -1:
             return
+        
         current = self.chest_vertex
-        path_list = [current]
-
+        path_list = [current] 
         while current is not self.player_vertex:
             current = current.previous
-            path_list.append(current)
-        
+            path_list.append(current)     
         path_list.reverse()
         return path_list
