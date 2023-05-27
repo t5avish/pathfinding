@@ -1,6 +1,6 @@
 import pygame, os.path, sys
 from settings import *
-from tiles import *
+from tiles import Tile
 from support import *
 from data import *
 from menu import Menu
@@ -32,12 +32,12 @@ class Editor():
                     if type == 'ground':
                         ground_tile_list = import_cut_graphics(os.path.dirname(__file__) + '/../graphics/tiles/ground.png')
                         tile_surface = ground_tile_list[int(val)]
-                        sprite = StaticTile(TILE_SIZE, x, y, tile_surface)    
+                        sprite = Tile(TILE_SIZE, x, y, tile_surface)    
                         
                     if type == 'objects':
                         objects_tile_list = import_cut_graphics(os.path.dirname(__file__) + '/../graphics/tiles/objects.png')
                         tile_surface = objects_tile_list[int(val)]
-                        sprite = StaticTile(TILE_SIZE, x , y ,tile_surface)
+                        sprite = Tile(TILE_SIZE, x , y ,tile_surface)
                     sprite_group.add(sprite)
         return sprite_group
     
